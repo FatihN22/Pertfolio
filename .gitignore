@@ -1,0 +1,13 @@
+images/
+.jpg
+.png
+node_modules/
+sass/
+*.json
+Projects/*/*.png
+#Vs.code
+.vscode/*
+.vscode/settings.json
+.vscode/task.json
+.vscode/launch.json
+.vscode/extensions.json

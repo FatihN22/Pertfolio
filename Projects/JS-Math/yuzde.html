@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="logo1.png" alt="Logo"></a>
+            </div>
+            <ul>
+                <!-- <li><a href="https://fatih-nayir.netlify.app/" target="_blank" class="button">Geliştirici Sayfası</a></li> -->
+                <li><a href="index.html" class="button">Matematik İşlemleri</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <h1 style="color:aliceblue">YÜZDE HESAPLAMA</h1>
+            <div class="inner-content">
+                <input type="number" id="text" placeholder="A">
+                <h3 style="color:beige; font-size:35px;">%</h3>
+                <input type="number" id="text2" placeholder="%B">
+                <button onclick="Yuzde()">Hesapla!</button>
+                <button id="clear" onclick="Clear()">Temizle!</button>
+            </div>
+            <h3 id="result">Deger</h3>
+            
+        </div>
+        <ul class="about">
+            <h3>AÇIKLAMA</h3>
+            <li>
+                İşlemde Sadece ("A" Sayısının "%B" Si Kaçtır) Değeri Hesaplanmaktadır Örneğin <br>
+                (150 sayısının yüzde 20 si kaçtır)
+            </li>
+            
+        </ul>
+        <footer>
+            <p class="copy">
+                Created By Fatih Nayir All Rights Reserved &copy; <br>
+            </p>
+            <a href="https://fatih-nayir.netlify.app/" target="_blank">Visit Personal Website</a>
+        </footer>
+    </main>
+    
+
+<script src="index.js"></script>
+</body>
+</html>

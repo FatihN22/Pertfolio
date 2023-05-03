@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+            <nav>
+                <div class="logo">
+                    <a href="#"><img src="logo1.png" alt="Logo"></a>
+                </div>
+                <ul>
+                    <!-- <li><a href="https://fatih-nayir.netlify.app/" target="_blank" class="button">Geliştirici Sayfası</a></li> -->
+                    <li><a href="yuzde.html" class="button">% Hesaplama</a></li>
+                </ul>
+            </nav>
+        <div class="container index">
+            <h1 style="color:aliceblue" id="in-h">MATEMATİKSEL İŞLEMLER</h1>
+            <div class="inner-content cnt-indx">
+                <input type="tel" id="text">
+                <button onclick="Hesap()" class="button">Hesapla!</button>
+                <button id="clear" onclick="Clear()" class="button">Temizle!</button>
+            </div>
+            
+                <h3 id="result">Deger</h3>
+            
+        </div>
+        <ul class="about ab-index">
+            <h3>AÇIKLAMA</h3>
+            <li>
+                Çarpma İşlemi için "*" Karakterini Tuşlayın Örneğin <b>(25*5)</b>
+            </li>
+            <li>
+                Bölme İşlemi İçin "/" Karakterini Tuşlayın Örneğin <b>(25/5)</b>
+            </li>
+            <li>
+                Toplama işlemi İçin "+" Karakterini Tuşlayın Örneğin <b>(25+5)</b>
+            </li>
+            <li>
+                Çıkarma İşlemi İçin "-" Karakterini Tuşlayın Örneğin <b>(25-5)</b>
+            </li>
+            <li>
+                Yuvarlama İşlemi İçin "." Karakterini Tuşlayın Örneğin <b>(25.5)</b> <br>
+                (Noktadan Sonra Kullanılan 5 ve üstü rakamlar her zaman yukarıya yuvarlar.)
+            </li>
+            <li>
+                Mod Alma İşlemi İçin "%" Karakterini Tuşlayın Örneğin <b>(22%5)</b> <br> (Bu işlemi açıklamak gerekirse "Mod Alma" bir sayının başka bir sayıya bölünmesi işlemi sonucunda kalanını veren bir matematiksel işlemdir. Verdiğimiz örnekte 22 adet ürün vardır ve her koliye 5 adet ürün sığmaktadır işlemin sonucu arta kalan, koliye sığmayan kaç adet ürün olduğunu gösterir.)
+            </li>
+        </ul>
+        <footer>
+            <p class="copy">
+                Created By Fatih Nayir All Rights Reserved &copy; <br>
+            </p>
+            <a href="https://fatih-nayir.netlify.app/" target="_blank">Visit Personal Website</a>
+        </footer>
+    </main>
+   
+
+<script src="index.js"></script>
+</body>
+</html>
