@@ -76,7 +76,7 @@ html{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 13;
+    z-index: 123;
 }
 .image-pop .img-p{
     padding: 2%;
@@ -103,7 +103,7 @@ html{
 
 /* DARK (Default Settings) */
 .dark{
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0,0,0,0.6)), url(images/dark-bg.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0,0,0,0.6)), url(images/dark-bg.webp);
     background-attachment:fixed;
     transition: 350ms ease-in;
 }
@@ -161,7 +161,7 @@ label.mobil{
 .light{
     /* background-color: var(--border-color); */
     /* background-color: rgba(0, 0, 0, 0.1); */
-    background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(images/light-bg.jpg);
+    background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(images/light-bg.webp);
     background-attachment: fixed;
     transition: 350ms ease-in;
 }
@@ -170,12 +170,7 @@ label.mobil{
     /* background-color: rgb(91, 169, 4); */
     background-color: #081121;
 }
-.light .dark-vid{
-    display: none;
-}
-.light .light-vid{
-    display: block;
-}
+
 .light .switch{
     background-color: var(--bg-color);
     color: var(--primary-color);
@@ -312,6 +307,14 @@ label.mobil{
     border: 2px solid var(--bg-color);
     overflow: hidden;
 }
+.light .project:nth-of-type(even){
+    box-shadow: 3px -2px 2px var(--icon-color),
+    -3px -2px 2px var(--icon-color);
+}
+.light .project:nth-of-type(odd){
+    box-shadow: -3px 2px 7px var(--icon-color),
+    3px 2px 7px var(--icon-color);
+}
 .light .h1 h1{
     color: var(--second-icon-color) !important;
 }
@@ -352,6 +355,9 @@ nav ul {
     border: 2px solid var(--border-color);
     border-radius: 50px;
 }
+nav ul li a{
+    overflow: hidden;
+}
 nav ul li a i{
     color: var(--icon-color);
     font-weight: 200;
@@ -360,14 +366,26 @@ nav ul li a i{
 }
 nav ul li a span{
     position: absolute;
+    width: 110px;
     right: 100%;
     padding: 3px 7px;
+    font-size: 19px;
     background-color: var(--icon-color);
     color: var(--bg-color);
-    transition: 300ms ease;
     border-top-left-radius: 5px;
-    display: none;
     border-bottom-left-radius: 5px;
+    font-family: var(--primary-font);
+    text-align: center;
+    transition: all 250ms ease;
+    transform: translate(5px,-20px);
+    opacity: 0;
+    visibility: hidden;
+
+}
+.nav-span{
+    transform: translate(0);
+    opacity: 1;
+    visibility: visible;   
 }
 #mobile-toggle{
     position: fixed;
@@ -454,11 +472,15 @@ nav ul li a span{
     border-radius: 50%;
     border: 1px solid var(--border-color);
 }
-.title-span{
+/* .title-span{
     font-family: var(--primary-font);
     width: 90px;
     text-align: center;
-}
+    display: block;
+    opacity: 1;
+    transform: translateX(100px);
+    transition: all 200ms ease;
+} */
 .sidebar{
     position: fixed;
     font-family: var(--primary-font);
@@ -854,16 +876,54 @@ section > a {
 /*        SKILLS SECTION END     */
 
 /* PROJECT SECTION START */
-
+#proje-title{
+    font-size: 3rem;
+    font-weight: 400;
+    text-align: center;
+    color: var(--second-icon-color);
+}
+.one-page-projects{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+}
+.one-page-projects .project{
+    flex: 0 0 40%;
+}
+.multipage-projects{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
 .project{
     width: 80%;
     height: 55vh;
-    background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.4)), url(images/project1.png);
+    /* background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.4)), url(images/project1.png);
     background-size: cover;
-    background-position: center;
+    background-position: center; */
     border-radius: 15px;
     position: relative;
     overflow: hidden;
+    z-index: 2;
+}
+.project:nth-of-type(even){
+    box-shadow: 2px -2px 2px var(--icon-color),
+    -2px -2px 2px var(--icon-color);
+}
+.project:nth-of-type(odd){
+    box-shadow: -2px 2px 2px var(--icon-color),
+    2px 2px 2px var(--icon-color);
+}
+.project img{
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: 1;
 }
 .project .h1{
     position: absolute;
@@ -873,6 +933,7 @@ section > a {
     top: 5%;
     right: 5%;
     transition: 355ms ease-in;
+    z-index:3;
 }
 .project .h1 h1{
     position: relative;
@@ -887,11 +948,30 @@ section > a {
     width: 0;
     height: 14%;
     transition: 365ms ease-in;
+    z-index:2;
 }
-.project a{
+.project #full{
     display: flex;
     width: 100%;
     height: 100%;
+    position: absolute;
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.4));
+    z-index:2;
+}
+.project .go-project{
+    padding: 1rem 1.5rem;
+    color: var(--icon-color) !important;
+    border: 0.1rem solid var(--icon-color);
+    border-radius: 15px;
+    background-color: var(--bg-color);
+    cursor: pointer;
+    transition: 150ms ease-in;
+}
+.project .go-project span{
+    color: var(--icon-color) !important;
+}
+.project .go-project:hover{
+    transform: scale(1.1);
 }
 .project:hover h1::before{
     width: 100%;
@@ -902,16 +982,29 @@ section > a {
 .what-used{
     position: absolute;
     bottom: 10%;
-    left: 10%;
+    left: 0;
+    width: 100%;
+    padding: 0 1rem;
     gap: 5px;
     display: flex; 
+    align-items: center;
+    justify-content: space-around;
     transition: 355ms ease-in;
+    z-index:2;
+}
+.what-used .heads{
+    display: flex;
+    gap: 20px;
 }
 .what-used h4{
     padding: 1rem 1.5rem;
     color: var(--bg-color);
     border-radius: 15px;
     background-color: var(--icon-color);
+}
+.one-page-projects .what-used{
+    flex-direction: column;
+    height: 22vh;
 }
 /* PROJECT SECTION END */
 
@@ -920,49 +1013,8 @@ section > a {
     color: var(--primary-color);
     font-size: 2rem;
 }
-form{
-    display: flex;
-    flex-direction: column;
-    color: var(--primary-color);
-    width: 100%;
-    height: 100%;
-    gap: 20px;
-}
-.field{
-    display: flex;
-    flex-direction: column;
-}
-form input[type=email]{
-    outline: none;
-    border-radius: 2rem;
-    width: 15rem;
-    padding: 1rem;
-    height: 2rem;
-    background-color: transparent;
-    border: 1px solid var(--border-color);
-    color: var(--primary-color);
-}
-textarea{
-    background-color: transparent;
-    color: var(--primary-color);
-    padding: 10px;
-    font-size: 15px;
-}
-.form-submit{
-    width: 50%;
-    padding: 10px 30px;
-    border-radius: 20px;
-    font-size: 20px;
-    font-family: var(--primary-font);
-    font-weight: 400;
-    cursor: pointer;
-    border: 1px solid transparent;
-    transition: 350ms ease-out;
-}
-.form-submit:hover{
-    background-color: transparent;
-    border: 1px solid var(--border-color);
-    color: var(--primary-color);
+#contact{
+    padding-bottom: 5rem;
 }
 
 /* CONTACT SECTION END */

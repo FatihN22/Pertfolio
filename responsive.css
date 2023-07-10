@@ -35,8 +35,20 @@
     .skills-cards .card, .inner-card{
         overflow: hidden;
     }
+    .one-page-projects{
+        justify-content: left;
+    }
+    .one-page-projects .project{
+        flex: 0 0 88%;
+    }
     .what-used{
         flex-direction: column;
+        gap: 20px;
+    }
+    .project .go-project{
+        padding: 0.6rem 1rem;
+        bottom: 50%;
+        right: 45%;
     }
 }
 
@@ -154,17 +166,16 @@
         justify-content: space-around;
     }
     .exp p{
-        font-size: 15px;
+        font-size: 17px;
     }
     .view-project a{
-        width:110px;
-        height: 110px;
+        width:140px;
     }
     .about-text{
         gap: 50px;
     }
     .about-text p:last-child{
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
     #skills{
         padding: 25px 0;
@@ -189,6 +200,24 @@
     }
     #projects .about-text p{
         font-size: 50px !important;
+    }
+    .project{
+        width: 90%;
+    }
+    .project .go-project{
+        padding: 0.6rem 1rem;
+        bottom: 25%;
+        right: 8%;
+    }
+    .one-page-projects{
+        justify-content: left;
+    }
+    .one-page-projects .project{
+        flex: 0 0 88%;
+    }
+    .what-used{
+        flex-direction: column;
+        gap: 20px;
     }
     .what-used h4{
         padding: 0.5rem 1rem;
@@ -397,6 +426,20 @@
     #projects .about-text p{
         font-size: 50px;
     }
+    .one-page-projects{
+        justify-content: left;
+    }
+    .one-page-projects .project{
+        flex: 0 0 45%;
+    }
+    .one-page-projects .what-used{
+        height: auto;
+    }
+    .one-page-projects .what-used .heads{
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+    }
     .contact-info p{
         font-size: 2.2rem;
     }
@@ -568,7 +611,7 @@
    }
 }
 
-@media screen and (min-width:1440px) and (max-width:1920){
+@media screen and (min-width:1440px) and (max-width:1920px){
     footer ul{
         display: none !important;
     }
@@ -625,5 +668,10 @@
     .about-text p:last-child , .int-text p:last-child{
         font-size: 2rem;
         width: 80%;
+    }
+}
+@media screen and (max-height:600px) {
+    .skills-cards .card{
+        height: 55vh;
     }
 }

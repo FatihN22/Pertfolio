@@ -5,15 +5,17 @@ backTo.addEventListener('click', (e) => {;
     window.scrollTo({top:0, behavior:"smooth"})
 })
 window.onscroll = function() {scrollFunction()};
-
+window.addEventListener('load',function(){
+  scrollFunction();
+});
 function scrollFunction(){
   if(window.pageYOffset > 550){
     backTo.style.display = 'block';
     if(window.innerWidth < 1200){
       if(window.scrollY >= document.body.scrollHeight - window.innerHeight){
-        backTo.style.bottom = '7%'
+        backTo.style.bottom = '3.5rem'
       }else{
-        backTo.style.bottom = '3%'
+        backTo.style.bottom = '2rem'
       }
     }
   }else{
@@ -36,7 +38,7 @@ function traceBar(){
     track.style.width = scrollpercent
 };
 window.addEventListener('scroll',traceBar);
-/*TRACBAR END*/ 
+/*TRACKBAR END*/ 
 
  /* Theme Switch Area*/
 
@@ -80,27 +82,35 @@ swch2.addEventListener("click", () => {
 
 /* Side Navbar Area */
 
-const className = document.querySelectorAll(".navbtn") 
-const tooltip = document.querySelectorAll(".title-span");
-className.forEach( (eleman, index) => { 
+const navHover = document.querySelectorAll(".navbtn") 
+const navSpan = document.querySelectorAll(".title-span");
+navHover.forEach( (eleman, index) => { 
 
     eleman.addEventListener("mouseover", function(){
-        tooltip[index].style.display = 'block'; 
+        // navSpan[index].style.opacity = '1'; 
+        navSpan[index].classList.add('nav-span');
     })
     eleman.addEventListener("mouseleave", function(){
-        tooltip[index].style.display = 'none';
+        // navSpan[index].style.opacity = '0';
+        navSpan[index].classList.remove('nav-span');
     })
 })
 // /* Side Navbar Area End */
-
+navHover.forEach(nav => {
+  nav.addEventListener()
+});
 /*IMAGE POP UP*/ 
 
 function popUp(imgSrc){
   let modal = document.getElementById('myModal');
   let modalImg = document.getElementById('pop-img');
   modal.style.display = 'block';
-  modalImg.src ='images/deneme3.jpg'
+  modalImg.src ='images/profile.webp'
   
+  modal.addEventListener('click',function(){
+    modal.style.display = 'none';
+  });
+
   let span = document.getElementById('close');
   span.onclick = function(){
     modal.style.display = 'none';
@@ -108,24 +118,7 @@ function popUp(imgSrc){
 }
 
 /* IMAGE POP UP END*/ 
-// /* Mobile Menu */
 
-// function MobileNav(){
-//     const Mtoggle = document.getElementById("mobile-links");
-//     const mTog = document.getElementById("mTog")
-//     if (Mtoggle.style.transform === "translateX(0px)" ){
-//         Mtoggle.style.transform = "translateX(1000px)";
-//         mTog.classList.add('bx-menu-alt-right');
-//         mTog.classList.remove('bx-log-in-circle');
-//     } else{
-//         Mtoggle.style.transform = "translateX(0px)"
-//         mTog.classList.add('bx-log-in-circle');
-//         mTog.classList.remove('bx-menu-alt-right')
-//     }
-      
-// }
-
-/* Mobile Menu End*/
 // Mobile Menu
 
 function MobileNav(){
@@ -162,48 +155,3 @@ function MobileNav(){
         Mtoggle.style.backdropFilter = "blur(23px)";
     }   
 }
-/* Form Section*/
-
-const btn = document.getElementById('button');
-
-document.getElementById('form')
- .addEventListener('submit', function(event) {
-   event.preventDefault();
-
-   btn.value = 'Sending...';
-
-   const serviceID = 'default_service';
-   const templateID = 'template_874c1ll';
-
-   emailjs.sendForm(serviceID, templateID, this)
-    .then(() => {
-      btn.value = 'Send Email';
-      alert('Sent Succsessful!');
-    }, (err) => {
-      btn.value = 'Send Email';
-      alert(JSON.stringify(err));
-    });
-});
-
-/*Form TR Section*/ 
-const btntr = document.getElementById('buttontr');
-
-document.getElementById('form')
- .addEventListener('submit', function(event) {
-   event.preventDefault();
-
-   btntr.value = 'Gönderiliyor...';
-
-   const serviceID = 'default_service';
-   const templateID = 'template_874c1ll';
-
-   emailjs.sendForm(serviceID, templateID, this)
-    .then(() => {
-      btntr.value = 'Mail Gönder!';
-      alert('Başarıyla Gönderildi!');
-    }, (err) => {
-      btntr.value = 'Mail Gönder!';
-      alert(JSON.stringify(err));
-    });
-});
-/*Form Section End*/ 
