@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap" rel="stylesheet">
+    <title>BBLK Cafe Design</title>
+</head>
+<body>
+     <nav>
+         <div class="logo">
+                <a href="index.html">
+                    <img src="Images/LOGO.png" alt="Logo">
+                </a>
+         </div>
+       
+    </nav>
+    <a href="javascrit:void(0)" id="top"><i class='bx bxs-up-arrow bx-sm'></i></a>
+<main class="menu-main">
+    <!-- <header>
+        <h5>Lezzetli & Harika</h5>
+        <span><img src="Images/span.png" alt="" width="100px"></span>
+        <h1>BBLK Cafe MENÜ</h1>
+    </header> -->
+    <div class="menu-container">
+        <div class="head-text">
+            <p>Lezzetli Tatlar İle Gününüze Bir Mola!</p>
+        </div>
+        <div class="menu-nav">
+            <ul>
+                <li><a href="javascrit:void(0)" class="filter-btn active" data-target="cold"><span></span><span></span> Soğuk İçecekler</a></li>
+                <li><a href="javascrit:void(0)" class="filter-btn" data-target="tea"><span></span><span></span> Kahve & Çaylar</a></li>
+                <li><a href="javascript:void(0)" class="filter-btn" data-target="desert"><span></span><span></span> Tatlılar</a></li>
+                <li><a href="javascript:void(0)" class="filter-btn" data-target="snacks"><span></span><span></span> Atıştırmalıklar</a></li>
+            </ul>
+        </div>
+        <div class="menus" id="all">
+            <div class="right-bg">
+                <img src="Images/Bg-icons/right-bg.png" alt="">
+            </div>
+            <div class="left-bg">
+                <img src="Images/Bg-icons/left-bg.png" alt="">
+            </div>
+            <div class="cold tab" id="cold">
+                <h3>Soğuk İçecekler</h3>
+                <div class="items">
+                    <div class="item">
+                        <div class="image">
+                            <img src="Images/Cold/milkshake.png" alt="">
+                        </div>
+                        <div class="info">
+                            <div class="info-header">
+                                <h4>MilkShake</h4>
+                                <h5>35.50₺</h5>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi distinctio facilis totam sequi ex nam!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <img src="Images/Cold/frozen.png" alt="">
+                        </div>
+                        <div class="info">
+                            <div class="info-header">
+                                <h4>Frozen</h4>
+                                <h5>35.50₺</h5>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi distinctio facilis totam sequi ex nam!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <img src="Images/Cold/coke.png" alt="">
+                        </div>
+                        <div class="info">
+                            <div class="info-header">
+                                <h4>Gazlı İçecekler</h4>
+                                <h5>19.50₺</h5>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi distinctio facilis totam sequi ex nam!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <img src="Images/Cold/lemonade.png" alt="">
+                        </div>
+                        <div class="info">
+                            <div class="info-header">
+                                <h4>Limonata</h4>
+                                <h5>19.00₺</h5>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi distinctio facilis totam sequi ex nam!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <img src="Images/Cold/maden-suyu.png" alt="">
+                        </div>
+                        <div class="info">
+                            <div class="info-header">
+                                <h4>Maden Suyu</h4>
+                                <h5>15.50₺</h5>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi distinctio facilis totam sequi ex nam!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <img src="Images/Cold/water.png" alt="">
+                        </div>
+                        <div class="info">
+                            <div class="info-header">
+                                <h4>Su</h4>
+                                <h5>9.50₺</h5>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi distinctio facilis totam sequi ex nam!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="coffe tab" id="tea">
+                <h3>Kahve & Çay</h3>
+                <div class="items">
+                    <div class="item">
+                        <div class="image">
+                            <img src="Images/Coffe/tr-coffe.png" alt="">
+                        </div>
+                        <div class="info">
+                            <div class="info-header">
+                                <h4>Türk Kahvesi</h4>
+                                <h5>25.50₺</h5>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi distinctio facilis totam sequi ex nam!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <img src="Images/Coffe/tr-tea.png" alt="">
+                        </div>
+                        <div class="info">
+                            <div class="info-header">
+                                <h4>Bardak Çay</h4>
+                                <h5>25.50₺</h5>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi distinctio facilis totam sequi ex nam!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <img src="Images/Coffe/fincan-cay.png" alt="">
+                        </div>
+                        <div class="info">
+                            <div class="info-header">
+                                <h4>Fincan Çay</h4>
+                                <h5>15.50₺</h5>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi distinctio facilis totam sequi ex nam!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <img src="Images/Coffe/latte.png" alt="">
+                        </div>
+                        <div class="info">
+                            <div class="info-header">
+                                <h4>Latte (Sıcak&Soğuk)</h4>
+                                <h5>35.00₺</h5>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi distinctio facilis totam sequi ex nam!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <img src="Images/Coffe/mocha.png" alt="">
+                        </div>
+                        <div class="info">
+                            <div class="info-header">
+                                <h4>Mocha (Sıcak&Soğuk)</h4>
+                                <h5>35.50₺</h5>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi distinctio facilis totam sequi ex nam!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <img src="Images/Coffe/cappuccino.png" alt="">
+                        </div>
+                        <div class="info">
+                            <div class="info-header">
+                                <h4>Cappuccino</h4>
+                                <h5>25.50₺</h5>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi distinctio facilis totam sequi ex nam!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="desert tab" id="desert">
+                <h3>Tatlılar</h3>
+                <div class="items">
+                
+                    <div class="item">
+                        <div class="image">
+                            <img src="Images/Tatlı/cheesecake.png" alt="">
+                        </div>
+                        <div class="info">
+                            <div class="info-header">
+                                <h4>Cheesecake</h4>
+                                <h5>39.50₺</h5>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi distinctio facilis totam sequi ex nam!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <img src="Images/Tatlı/tiramisu.png" alt="">
+                        </div>
+                        <div class="info">
+                            <div class="info-header">
+                                <h4>Tiramisu</h4>
+                                <h5>35.00₺</h5>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi distinctio facilis totam sequi ex nam!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <img src="Images/Tatlı/profiterol.png" alt="">
+                        </div>
+                        <div class="info">
+                            <div class="info-header">
+                                <h4>Profiterol</h4>
+                                <h5>30.50₺</h5>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi distinctio facilis totam sequi ex nam!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <img src="Images/Tatlı/brownie.png" alt="">
+                        </div>
+                        <div class="info">
+                            <div class="info-header">
+                                <h4>Brownie</h4>
+                                <h5>25.50₺</h5>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi distinctio facilis totam sequi ex nam!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="snacks tab" id="snacks">
+                <h3>Atıştırmalıklar</h3>
+                <div class="items">
+                    <div class="item">
+                        <div class="image">
+                            <img src="Images/Snacks/patates.png" alt="">
+                        </div>
+                        <div class="info">
+                            <div class="info-header">
+                                <h4>Patates Kızartması</h4>
+                                <h5>25.50₺</h5>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi distinctio facilis totam sequi ex nam!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <img src="Images/Snacks/sogan.png" alt="">
+                        </div>
+                        <div class="info">
+                            <div class="info-header">
+                                <h4>Soğan Halkası</h4>
+                                <h5>19.50₺</h5>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi distinctio facilis totam sequi ex nam!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <img src="Images/Snacks/tavuk.png" alt="">
+                        </div>
+                        <div class="info">
+                            <div class="info-header">
+                                <h4>Tavuk Tabağı</h4>
+                                <h5>45.50₺</h5>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi distinctio facilis totam sequi ex nam!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <img src="Images/Snacks/karisik.png" alt="">
+                        </div>
+                        <div class="info">
+                            <div class="info-header">
+                                <h4>Karışık Atıştırmalık</h4>
+                                <h5>35.00₺</h5>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi distinctio facilis totam sequi ex nam!
+                            </p>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</main>
+<footer>
+    <div class="logo">
+        <img src="Images/LOGO.png" alt="Logo">
+    </div>
+    <div class="social">
+        <ul>
+            <li><a href=""><i class='bx bxl-facebook bx-sm'></i></a></li>
+            <li><a href=""><i class='bx bxl-instagram bx-sm' ></i></a></li>
+            <li><a href=""><i class='bx bxl-twitter bx-sm'></i></a></li>
+        </ul>
+    </div>
+    <div class="copy">
+        <p>Tüm Hakları Saklıdır.</p>
+    </div>
+</footer>
+<script src="script/index.js"></script>
+</body>
+</html>

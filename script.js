@@ -1,5 +1,14 @@
-/* Back TO Top Area*/
+/*LOADER*/
 
+function loader(){
+  let loader = document.getElementById('load');
+  loader.classList.add('out');
+} 
+setTimeout(loader,1300) 
+
+/*LOADER END*/ 
+
+/* Back TO Top Area*/
 const backTo = document.getElementById('backTop')
 backTo.addEventListener('click', (e) => {;
     window.scrollTo({top:0, behavior:"smooth"})
@@ -44,23 +53,27 @@ window.addEventListener('scroll',traceBar);
 
 const theme = document.querySelector(".container"); 
 const swch = document.querySelector("#switch"); 
-
+const body = document.body
 // Sayfa yüklenirken, önceki tema tercihini yükle
-if (localStorage.getItem("theme") === "light") {
-  theme.classList.add("light");
-} else {
-    theme.classList.remove('light')
-    theme.classList.add("dark");
-}
+// if (localStorage.getItem("theme") === "light") {
+//   theme.classList.add("light");
+// } else {
+//     theme.classList.remove('light')
+//     theme.classList.add("dark");
+// }
 
 swch.addEventListener("click", () => {
   if (theme.classList.contains("dark")) {
     theme.classList.remove("dark");
     theme.classList.add("light");
+    body.classList.remove("dark-b");
+    body.classList.add("light-b");
     localStorage.setItem("theme", "light"); // Kullanıcının yeni tema tercihini kaydet
   } else {
     theme.classList.remove("light");
     theme.classList.add("dark");
+    body.classList.remove("light-b");
+    body.classList.add("dark-b");
     localStorage.setItem("theme", "dark"); // Kullanıcının yeni tema tercihini kaydet
   }
 });
@@ -99,25 +112,8 @@ navHover.forEach( (eleman, index) => {
 navHover.forEach(nav => {
   nav.addEventListener()
 });
-/*IMAGE POP UP*/ 
 
-function popUp(imgSrc){
-  let modal = document.getElementById('myModal');
-  let modalImg = document.getElementById('pop-img');
-  modal.style.display = 'block';
-  modalImg.src ='images/profile.webp'
-  
-  modal.addEventListener('click',function(){
-    modal.style.display = 'none';
-  });
 
-  let span = document.getElementById('close');
-  span.onclick = function(){
-    modal.style.display = 'none';
-  }
-}
-
-/* IMAGE POP UP END*/ 
 
 // Mobile Menu
 

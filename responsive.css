@@ -675,3 +675,39 @@
         height: 55vh;
     }
 }
+
+
+/* HORIZONTAL PHONE QUERIES */
+
+@media screen and (max-height:610px) {
+
+    .project h1{
+        font-size: 1.2rem;
+    }
+    .what-used{
+        top: 15%;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+    .one-page-projects .what-used .heads{
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .what-used .heads h4{
+        font-size: 0.8rem;
+        padding: .5rem 1rem;
+    }
+    .project .go-project{
+        padding: .5rem 1rem;
+    }
+    .multipage-projects .project{
+        width: 45%;
+    }
+    .int-text p:first-child, .about-text p:first-child, .res-text p{
+        font-size: 2.5rem;
+    }
+    .int-text p:last-child, .about-text p:last-child{
+        font-size: 1.2rem;
+    }
+}

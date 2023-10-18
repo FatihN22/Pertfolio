@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Fatih Nayir Personal Portfolio Site Check My Project and Contact Me!">
-    <meta name="keywords" content="Fatih Nayir, Personal Portfolio, Front-End, Front-End Developer, Resume, Projects, Portfolio Site">
+    <meta name="description" content="Fatih Nayir Kişisel Website ve Portfolyo Sayfası. Projelerini, yeteneklerini ve sosyal medya hesaplarıma göz atabilir,benimle iletişime geçebilirsiniz">
+    <meta name="keywords" content="Fatih Nayir, kişisel website, kişisel portfolyo, Front-End, Front-End Developer, yetenekler, CV , Projeler, ">
     <meta name="developer" content="Fatih Nayir">
     <meta name="Author" content="Fatih Nayir">
+    <meta name="robots" content="index, follow">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsive.css">
      <!-- SCROLL ANIMATE CDN -->
      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
      <!-- CDN END -->
-    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/images/qe.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,7 +23,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Sono:wght@300;400;500;600&family=Tilt+Neon&display=swap" rel="stylesheet">
     <title>Fatih Nayir Kişisel Web Sitesi</title>
 </head>
-<body>
+<body class="dark-b">
 
     
     <div class="select-lang s-desk">
@@ -31,6 +32,9 @@
             <a href="index.html"><img src="images/en.webp" alt="England Flag" width="25px"></a>  
          <a href="javascript:void(0);"><img src="images/tr.webp" alt="Turkey Flag" width="25px"></a>   
          </div>
+    </div>
+    <div class="loader" id="load">
+        <img src="images/bgrem.png" alt="">
     </div>
     <main class="container dark" id="content">
         <div id="cubuk"></div>
@@ -85,7 +89,7 @@
                 <h5>Bandırma Balıkesir</h5>
             </div>
             <div class="image-area">
-                <img src="images/profile.webp" alt="My Image" onclick="popUp()" loading="lazy">
+                <img src="images/profile.webp" alt="My Image" loading="lazy">
             </div>
             <div class="info-area">
                 <a href="mailto:fatih.nayir@hotmail.com">fatih.nayir@hotmail.com</a>
@@ -103,12 +107,6 @@
             </div>
             <div class="hire-me">
                 <a href="mailto:fatih.nayir@hotmail.com"><i class="fa-regular fa-envelope"></i> İletişime Geç!</a>
-            </div>
-        </div>
-        <div class="image-pop" id="myModal">
-            <span id="close"><i class='bx bx-x-circle'></i></span>
-            <div class="img-p">
-                <img src="" alt="" id="pop-img">
             </div>
         </div>
         <div class="navigation">
@@ -184,7 +182,10 @@
             </div>
             
         </section>
-        <section class="resume-section" id="resume">
+        <section class="resume-section" id="resume" data-aos="zoom-in-right"
+        data-aos-duration="1200"
+        data-aos-easing="linear"
+        data-aos-anchor-placement="top">
             <a href="#e"><i class='bx bx-receipt'></i> ÖZGEÇMİŞ</a>
             <div class="res-text">
                 
@@ -194,10 +195,7 @@
             <div class="res-details">
                 <h3 class="res-header">Deneyim</h3>
                 <div class="resume res-1"
-                    data-aos="zoom-out-down"
-                    data-aos-duration="1200"
-                    data-aos-easing="linear"
-                    data-aos-anchor-placement="top-bottom">
+                   >
 
                     <span>2022</span>
                     <h4 class="res-title">Jr. Ön Yüz Web Geliştirici</h4>
@@ -205,22 +203,14 @@
                     <p>Yerel bir ajans şirketinde öğrendiklerimi pekiştirmek ve kendimi geliştirmek için giriş seviyesi yazılımcı olarak basit projeler geliştirdim.</p>
                 </div>
                 <h3 class="res-header">Lisans Derecesi Eğitim</h3>
-                <div class="resume res-2"
-                        data-aos="zoom-in-right"
-                        data-aos-duration="1200"
-                        data-aos-easing="linear"
-                        data-aos-anchor-placement="top">
+                <div class="resume res-2">
                     <span>2021-(Devam Ediyor)</span>
                     <h4 class="res-title">Havacılık Yönetimi</h4>
                     <h5 class="res-job">Eskişehir Anadolu Üniversitesi</h5>
                     <p>Önlisansını tamamladığım <span style="color:rgba(255, 228, 196, 0.86);">Sivil Hava Ulaştırma İşletmeciliği</span> bölümünü lisansa tamamlayıp lisans diplomamı almak için öğrenim hayatıma devam ediyorum. </p>
                 </div>
                 <h3 class="res-header">Önlisans Derecesi Eğitim</h3>
-                <div class="resume res-3"
-                        data-aos="zoom-in-up"
-                        data-aos-duration="1200"
-                        data-aos-easing="linear"
-                        data-aos-anchor-placement="top-bottom">
+                <div class="resume res-3">
                     <span>2017-2019</span>
                     <h4 class="res-title">Sivil Hava Ulaştırma İşletmeciliği</h4>
                     <h5 class="res-job">Yenişehir M.Y.O / Uludağ Üniversitesi</h5>
@@ -310,15 +300,15 @@
                 </div>
             </div>
         </section>
-        <section class="project-section" id="projects">
+        <section class="project-section" id="projects" data-aos="fade-right"
+        data-aos-duration="1000"
+        data-aos-easing="linear"
+        data-aos-anchor-placement="bottom">
             <a href="#p"><i class='bx bx-archive'></i> PROJELER</a>
             <h3 id="proje-title">Basit Tek Sayfa Projeler</h3>
             <div class="one-page-projects">
                 <div class="project" 
-                    data-aos="fade-down"
-                    data-aos-duration="1000"
-                    data-aos-easing="linear"
-                    data-aos-anchor-placement="top">
+                    >
                 <div class="h1">
                     <h1>Matematik İşlemleri</h1>
                 </div>
@@ -334,11 +324,24 @@
                     <a href="Projects/JS-Math/index.html" target="_blank" class="go-project"><span>Projeye Git &#10147;</span></a>
                 </div>
                 
-            </div>
-            <div class="project" data-aos="zoom-in-down"
-            data-aos-duration="800"
-            data-aos-easing="linear"
-            data-aos-anchor-placement="top">
+                </div>
+                <div class="project">
+                    <div class="h1">
+                        <h1>Şans Çarkı</h1>
+                    </div>
+                    <img src="images/cark.webp" alt="Project-2">
+                    <a href="Projects/Cark/index.html" target="_blank" id="full">
+                    </a>
+                    <div class="what-used">
+                        <div class="heads">
+                            <h4>JavaScript</h4>
+                            <h4>HTML5</h4>
+                            <h4>CSS3</h4>
+                        </div>
+                        <a href="Projects/Cark/index.html" target="_blank" class="go-project"><span>Projeye Git &#10147;</span></a>
+                    </div>
+                </div>
+            <div class="project">
                 <div class="h1">
                     <h1>Basit Responsive Menü</h1>
                 </div>
@@ -354,10 +357,7 @@
                     <a href="Projects/Basic-Menu/index.html" target="_blank" class="go-project"><span>Projeye Git &#10147;</span></a>
                 </div>
             </div>
-            <div class="project" data-aos="fade-right"
-            data-aos-duration="1000"
-            data-aos-easing="linear"
-            data-aos-anchor-placement="top">
+            <div class="project" >
                 <div class="h1">
                     <h1>CSS Flexbox Özellikleri</h1>
                 </div>
@@ -375,12 +375,13 @@
             </div>
             </div>
             <h3 id="proje-title">Çok Sayfalı  Projeler</h3>
-            <div class="multipage-projects">
+            <div class="multipage-projects" 
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            data-aos-easing="linear"
+            data-aos-anchor-placement="bottom">
                 <div class="project" 
-                    data-aos="fade-down"
-                    data-aos-duration="1000"
-                    data-aos-easing="linear"
-                    data-aos-anchor-placement="top">
+                    >
                 <div class="h1">
                     <h1>Seremköy WebSite</h1>
                 </div>
@@ -398,8 +399,50 @@
                 
                 </div>
             
-            </div>
+                <div class="project" 
+                data-aos="fade-left"
+                data-aos-duration="1000"
+                data-aos-easing="linear"
+                data-aos-anchor-placement="bottom">
+                <div class="h1">
+                    <h1>TailGaming (Bu Proje Hala Geliştirme Aşamasındadır)</h1>
+                </div>
+                <img src="images/tailgaming.webp" alt="Project-1">
+                <a href="https://tailgaming.netlify.app" target="_blank" id="full">
+                </a>
+                <div class="what-used">
+                    
+                    <div class="heads">
+                        <h4>JavaScript</h4>
+                        <h4>TailWind</h4>
+                        <h4>CSS3</h4>
+                    </div>
+                    <a href="https://tailgaming.netlify.app" class="go-project"><span>Projeye Git &#10147;</span></a>
+                </div>
+                
+                </div>
 
+            </div>
+            <h3 id="proje-title" style="text-align: left; font-size: 2rem;">Ayrıca <a href="https://icodethis.com/BabLock">IcodeThis</a> Projelerime de Göz Atabilirsiniz</h3>
+            <div class="multipage-projects" data-aos="fade-right"
+            data-aos-duration="1000"
+            data-aos-easing="linear"
+            data-aos-anchor-placement="bottom">
+                <div class="project">
+                <div class="h1">
+                    <h1>IcodeThis Meydan Okumaları</h1>
+                </div>
+                <img src="images/icodethis.webp" alt="Project-1">
+                <a href="https://icodethis.com/BabLock" target="_blank" id="full">
+                </a>
+                <div class="what-used">
+                   
+                    <a href="https://icodethis.com/BabLock" class="go-project"><span>IcodeThis Profilime Git &#10147;</span></a>
+                </div>
+                
+                </div>
+            
+            </div>
         </section>
         <section class="contact-section" id="contact">
             <a href="#i"><i class='bx bx-phone-call'></i> İLETİŞİM</a>
